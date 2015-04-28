@@ -18,3 +18,8 @@ RUN git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugi
 RUN $HOME/.rbenv/bin/rbenv install 2.2.1
 RUN $HOME/.rbenv/bin/rbenv global 2.2.1
 RUN $HOME/.rbenv/shims/ruby -v
+
+RUN apt-get install -y software-properties-common python-software-properties
+RUN add-apt-repository -y ppa:chris-lea/node.js
+RUN apt-get update
+RUN apt-get -y install nodejs
